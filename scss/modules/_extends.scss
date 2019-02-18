@@ -1,0 +1,96 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item {
+	display: inline-block;
+   	margin: 0 em(12px);
+	@include mq(small) {
+		display: block;
+		/*margin: 0 em(12px);*/
+    }
+}
+
+%nav-item-link {
+	padding: em(8px, 18px);
+	text-decoration: none;
+  	border-bottom: 1px solid transparent;
+    @include mq(small) {
+		font-size: em(18px);
+		font-weight: $font-weight--light;
+		display: block;
+		padding-top: em(14px, 18px);
+    	padding-bottom: em(14px, 18px);
+    	border-bottom-color : palette(grey, xx-light);
+    }
+}
+
+%nav-item-on {
+  color: palette(black);
+  border-color: $color-primary;
+}
+
+// Sidebar Block Links
+
+%sidebar-item-links {
+	font-weight: $font-weight--regular;
+	display: block;
+	
+}
+
+// Headlines
+
+%heading-prim {
+	color      : palette(grey, x-dark);
+	font-weight: $font-weight--light;
+	font-size  : em(39px);
+	margin-top : 0;
+}
+
+%heading-sec {
+	font-size     : em(31px);
+	color         : palette(grey, light);
+	letter-spacing: $letter-space;
+	font-weight   : $font-weight--thin;
+	font-family   : $font-family--secondary;
+}
+
+
+//Position 
+
+%position-relative {
+	position: relative;
+}
+
+%position-absolute {
+	position: absolute;
+}
+
+// Buttons
+
+%btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Icons
+
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
+}

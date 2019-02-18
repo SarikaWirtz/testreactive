@@ -1,0 +1,25 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+/*select all classes which starts from btn*/
+[class^="btn--"] {
+	@extend %center-align;
+  	@extend %btn;
+  	width: 100%;
+  	margin-bottom: em(20px, 14px);
+    @media screen and (min-width: 37.5em) {
+       width: auto;
+      display: inline-block;
+    }
+}
+
+.btn {
+	@include bg-colors($ui-colors);
+		@include m(small) {
+			width: em(120px);
+    		padding: em(10px) em(8px);
+    		display: inline-block;
+    	}
+
+}

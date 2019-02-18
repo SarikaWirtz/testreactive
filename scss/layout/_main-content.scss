@@ -1,0 +1,54 @@
+// ==========================================================================
+// Main-Content
+// ==========================================================================
+
+.content {
+	@extend %clearfix;
+	border-bottom: 4px dotted palette(grey, light);
+	@include e(center) {
+		@extend %center-align;
+	}
+	@include m(left) {
+		@include mq(large) {
+			float : left;
+			width : 40%;
+		}
+	}
+	@include m(right) {
+		@include mq(large){
+			float  : right;
+			width  : calc(60% - 2em);
+			padding: 0 1em;
+		}
+	}
+}
+
+.blockquote {
+	@include blockquote();
+	@include mq(small) {
+		margin-left: 2em;
+		font-size: 1em;
+	}
+}
+
+.article_header {
+	@extend %clearfix;
+	@extend %position-relative;
+	.headline-secondary {
+		@extend %float-left;
+	}
+	&-arrow {
+		@extend %float-right;
+		@extend %position-absolute;
+		cursor: pointer;
+		right: 0;
+    	top: 40%;
+		width: em(15px);
+		height: em(13px);
+  }
+}
+
+article.active {
+	height: auto;
+}
+

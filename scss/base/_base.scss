@@ -1,0 +1,150 @@
+// ======================================
+//  Base Styles .......
+// ======================================
+
+*, 
+*:before, 
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing   : inherit;
+  box-sizing        : inherit;
+ }
+
+ html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing   : border-box;
+  box-sizing        : border-box;
+  font-size         : 100%;
+  min-height        : 100vh;
+}
+
+body {
+	color: palette(grey, dark);
+	font-size: $base__font-size; 
+	font-family: $font-family--primary;
+	line-height: ($base__line/$base__font-size);
+	font-feature-settings      : "kern", "liga";
+  -moz-font-feature-settings   : "kern", "liga";
+  -moz-font-feature-settings   : "kern=1", "liga=1";
+  -ms-font-feature-settings    : "kern", "liga";
+  -o-font-feature-settings     : "kern", "liga";
+  -webkit-font-feature-settings: "kern", "liga";
+}
+
+h1, h2, h3, h4, blockquote {
+  
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  @media (min-width: 769px) {
+  	margin: 1.01em 0 0.2em;
+  }
+}
+
+h1 {
+  @extend %heading-prim;
+}
+
+h2 {
+  @extend %heading-sec;
+  
+}
+
+h3 {
+	font-size: em(25px);
+	margin-top: em(20px, 25px);
+}
+
+h4 {
+	font-size: em(20px);
+	color: palette(grey, dark);
+	text-transform: uppercase;
+	letter-spacing: $letter-space;
+	font-weight: $font-weight--medium;
+}
+
+small, 
+.font_small {
+	font-size: em(12.8px);
+}
+
+p {
+  font-size: em(18px);
+  line-height: (27px/18px);
+  font-weight: $font-weight--light;
+  margin-bottom: 1.3em;
+
+}
+
+// links 
+
+a {
+	color: palette(grey, dark); 
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+}
+
+
+// Blockquote
+
+blockquote {
+
+	@include blockquote();
+	@media (min-width: 769px) {
+		margin: em(32px, 24px) 0;
+		padding: 0 0 0 5%;
+		border-left: em(8px, 24px) solid palette(grey, xx-light); 
+		font-size: em(20px);
+	}
+	
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+//image
+
+img {
+  margin-bottom: em(24px);
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+// Form elements
+
+input, 
+textarea {
+	display: block;
+	padding: em(12px);
+	width: 100%; 
+	outline: 0;
+	border: 0;
+}
+
+input:focus, 
+textarea:focus {
+	transition: $trns_duration;
+}
+
+// Button
+
+button {
+	outline: 0;
+}
+
+// Layout
+
+footer {
+	border-top: 1px solid palette(grey, xx-light);
+	p {
+		font-size: em(16px);
+		margin-top: em(22px, 16px);
+	}
+}

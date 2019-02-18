@@ -1,0 +1,26 @@
+// ==========================================================================
+// Headlines
+// ==========================================================================
+
+
+.headline {
+	&-primary {
+		@extend %heading-prim;
+		
+		@include m(centered) {
+			@extend %heading-prim;
+			@extend %center-align;
+			margin-bottom: em(10px);
+		}
+	}
+	&-secondary {
+		@extend %heading-sec;
+		margin-top: em(10px, 31px);
+		@include m(centered) {
+			@extend %heading-sec;
+			@extend %center-align;
+			margin-top: em(10px, 31px);
+		}
+	}
+}
+

@@ -1,0 +1,34 @@
+.sidebar {
+	@extend %position-relative;
+	text-decoration: underline;
+	padding: 5px 10px;
+	&-block {
+		display: block;
+		@extend %center-align;
+	}
+	@include mq(medium) {
+		@include flexy;
+	}
+}
+
+.sidebarlinks {
+	
+	&__item {
+		display: block;
+		padding-top: em(2px, 18px);
+    	padding-bottom: em(2px, 18px);
+    	border-bottom : 1px solid palette(grey, xx-light);
+		a {
+			@extend %sidebar-item-links;
+    	}
+    	@include m(nobottom-border) {
+	    	&:last-child {
+	    		a {
+	    		  border-bottom : none;
+	    		  @extend %sidebar-item-links;
+	    		}
+	    	}
+    	}
+	}
+
+}

@@ -1,0 +1,24 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+	margin-bottom: 10px;
+	@include e(item) {
+		@extend %nav-item;
+		a {
+		  color: palette(grey);
+		  @extend %nav-item-link;
+    	  &:hover {
+			@extend %nav-item-on; 
+    	  } 
+		}
+		@include m(current) {
+			@extend %nav-item;
+			a {
+			 @extend %nav-item-link;
+        	 @extend %nav-item-on;
+			}
+		}
+	}
+}
